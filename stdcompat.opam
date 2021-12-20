@@ -12,10 +12,10 @@ depends: [
 ]
 depopts: [ "result" "seq" "uchar" "ocamlfind" ]
 build: [
-  [make "-f" "Makefile.bootstrap" "-j" jobs]
+  [gmake "-f" "Makefile.bootstrap" "-j" jobs]
   ["./configure" "--prefix=%{prefix}%"]
-  [make "all" "test" {with-test}]
+  [gmake "all" "test" {with-test}]
 ]
-install: [make "install"]
-dev-repo: "git+https://github.com/thierry-martinez/stdcompat.git"
+install: [gmake "install"]
+dev-repo: "git+https://github.com/daachi/stdcompat.git"
 version: "16"
